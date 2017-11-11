@@ -10,8 +10,9 @@ var crystal4 = getRandomInt(1, 12);
 
 var score = 0;
 
+var wins = 0;
 
-
+var losses = 0; 
 
 
 
@@ -27,23 +28,39 @@ $(document).ready(function(){
 
 		if ($(this).attr('id')=== 'white'){
 			score += crystal1;
-		}
+			$('.score1').html(score);
+		};
 
-		else if ($(this).attr('id')=== 'blue'){
+		if ($(this).attr('id')=== 'blue'){
 			score += crystal2;
-		}
+			$('.score1').html(score);
+		};
 
-		else if ($(this).attr('id')=== 'red'){
+		if ($(this).attr('id')=== 'red'){
 			score += crystal3;
-		}
+			$('.score1').html(score);
+		};
 
-		else if ($(this).attr('id')=== 'orange'){
+		if ($(this).attr('id')=== 'orange'){
 			score += crystal4;
-		}
-
-		alert(score);
+			$('.score1').html(score);
+		};
 	});	
+
+	$('.numtomatch').html(computerTarget);
+
+//hey guys, very much getting confused with the section below here. 
+//been working on it for a few hours and didnt realize it was almost midnight. 
+//thanks
+
+
+	$('.victory').html(wins);
+
+	$('.failure').html(losses);
+
+	//if (computerTarget > score){
+	//	losses+=;
+	//	console.log(losses)
+	//	};
 });
-
-
 
