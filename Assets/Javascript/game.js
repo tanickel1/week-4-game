@@ -23,6 +23,8 @@ function getRandomInt(min, max) {
 }
 
 $(document).ready(function(){
+	$('.numtomatch').html(computerTarget);
+
 	$('.crystal').on('click', function(){
 
 
@@ -45,22 +47,29 @@ $(document).ready(function(){
 			score += crystal4;
 			$('.score1').html(score);
 		};
+
+		if (computerTarget < score){
+		losses++;
+		console.log(losses);
+		};
+
+		if (computerTarget === score){
+		wins++;
+		console.log(losses);
+
+		};
+
+		$('.victory').html(wins);
+
+		$('.failure').html(losses);
 	});	
 
-	$('.numtomatch').html(computerTarget);
+	
 
 //hey guys, very much getting confused with the section below here. 
 //been working on it for a few hours and didnt realize it was almost midnight. 
 //thanks
 
 
-	$('.victory').html(wins);
-
-	$('.failure').html(losses);
-
-	//if (computerTarget > score){
-	//	losses+=;
-	//	console.log(losses)
-	//	};
 });
 
